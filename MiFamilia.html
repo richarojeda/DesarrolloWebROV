@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Familia</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #f0f4f8 0%, #c7d2fe 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      border: 2px solid #818cf8;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(129,140,248,0.13);
+      padding: 44px 56px 36px 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+      min-width: 340px;
+      max-width: 700px;
+    }
+    h1 {
+      color: #312e81;
+      font-size: 2.3rem;
+      margin: 0;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .familia-list {
+      display: flex;
+      flex-direction: row; /* Horizontal */
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+      margin-top: 8px;
+      width: 100%;
+    }
+    .familia-card {
+      background: #eef2ff;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(129,140,248,0.09);
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 160px;
+      transition: transform 0.18s;
+      min-height: 140px;
+    }
+    .familia-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(129,140,248,0.16);
+    }
+    .familia-icon {
+      font-size: 2.2rem;
+      color: #818cf8;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 1px 4px rgba(129,140,248,0.09);
+      margin-bottom: 10px;
+    }
+    .familia-nombre {
+      font-weight: bold;
+      color: #312e81;
+      font-size: 1.08rem;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .familia-desc {
+      color: #555;
+      font-size: 0.97rem;
+      text-align: center;
+    }
+    p {
+      color: #555;
+      font-size: 1.13rem;
+      margin: 0 0 8px 0;
+      text-align: center;
+    }
+    a {
+      background: #818cf8;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.2s;
+      border: none;
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(129,140,248,0.08);
+    }
+    a:hover {
+      background: #312e81;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mi Familia</h1>
+    <p>Mi familia es mi mayor apoyo y alegría. Cada uno de ellos es especial y juntos formamos un gran equipo.</p>
+    <div class="familia-list">
+      <div class="familia-card">
+        <span class="familia-icon">👨‍👩‍👦</span>
+        <div class="familia-nombre">Papá</div>
+        <div class="familia-desc">Ejemplo de esfuerzo y dedicación, siempre guiando con sabiduría.</div>
+      </div>
+      <div class="familia-card">
+        <span class="familia-icon">👩</span>
+        <div class="familia-nombre">Mamá</div>
+        <div class="familia-desc">Cariñosa y comprensiva, el corazón de nuestro hogar.</div>
+      </div>
+      <div class="familia-card">
+        <span class="familia-icon">🧑</span>
+        <div class="familia-nombre">Hermano</div>
+        <div class="familia-desc">Compañero de aventuras y gran amigo en todo momento.</div>
+      </div>
+    </div>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Hobbies</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #9febf7 0%, #4bd0ed 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #a5f26e;
+      border: 2px solid #6366f1;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(99,102,241,0.12);
+      padding: 38px 54px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      min-width: 320px;
+    }
+    h1 {
+      color: #3730a3;
+      font-size: 2.2rem;
+      margin: 0;
+      letter-spacing: 1px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .hobbies-list {
+      display: flex;
+      flex-direction: row; /* Cambiado a horizontal */
+      gap: 22px;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hobby {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      background: #eef2ff;
+      border-radius: 12px;
+      padding: 16px 22px;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.07);
+      width: 210px;
+      transition: transform 0.18s;
+      min-height: 180px;
+    }
+    .hobby:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 20px rgba(99,102,241,0.13);
+    }
+    .hobby-icon {
+      font-size: 2.2rem;
+      color: #6366f1;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 1px 4px rgba(99,102,241,0.09);
+      min-width: 48px;
+      text-align: center;
+    }
+    .hobby-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: center;
+      text-align: center;
+    }
+    .hobby-title {
+      font-weight: bold;
+      color: #3730a3;
+      font-size: 1.13rem;
+      margin-bottom: 2px;
+    }
+    .hobby-desc {
+      color: #444;
+      font-size: 1rem;
+      margin: 0;
+    }
+    a {
+      background: #6366f1;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.2s;
+      border: none;
+      font-size: 1rem;
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    }
+    a:hover {
+      background: #3730a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mis Hobbies</h1>
+    <div class="hobbies-list">
+      <div class="hobby">
+        <span class="hobby-icon">💻</span>
+        <div class="hobby-info">
+          <div class="hobby-title">Programar</div>
+          <div class="hobby-desc">Me encanta crear páginas web y aprender nuevos lenguajes de programación.</div>
+        </div>
+      </div>
+      <div class="hobby">
+        <span class="hobby-icon">🎮</span>
+        <div class="hobby-info">
+          <div class="hobby-title">Jugar videojuegos</div>
+          <div class="hobby-desc">Disfruto de los videojuegos porque me permiten relajarme y divertirme con amigos.</div>
+        </div>
+      </div>
+      <div class="hobby">
+        <span class="hobby-icon">📷</span>
+        <div class="hobby-info">
+          <div class="hobby-title">Fotografía</div>
+          <div class="hobby-desc">Me gusta capturar momentos especiales y explorar la creatividad a través de la cámara.</div>
+        </div>
+      </div>
+      <div class="hobby">
+        <span class="hobby-icon">🏃‍♂️</span>
+        <div class="hobby-info">
+          <div class="hobby-title">Hacer deporte</div>
+          <div class="hobby-desc">Practicar deporte me ayuda a mantenerme saludable y lleno de energía cada día.</div>
+        </div>
+      </div>
+    </div>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>

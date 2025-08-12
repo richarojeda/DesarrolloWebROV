@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Envíame un Mensaje</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      border: 2px solid #6366f1;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(99,102,241,0.12);
+      padding: 38px 54px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      min-width: 320px;
+      max-width: 400px;
+    }
+    h1 {
+      color: #3730a3;
+      font-size: 2.2rem;
+      margin: 0;
+      letter-spacing: 1px;
+      text-align: center;
+      font-weight: 700;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      align-items: stretch;
+    }
+    label {
+      color: #444;
+      font-weight: 500;
+      margin-bottom: 4px;
+      text-align: left;
+      font-size: 1.05rem;
+    }
+    input[type="text"],
+    textarea {
+      border: 1.5px solid #a5b4fc;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #f1f5fd;
+      color: #222;
+      transition: border 0.2s, box-shadow 0.2s;
+      outline: none;
+      box-shadow: 0 1px 4px rgba(99,102,241,0.06);
+    }
+    input[type="text"]:focus,
+    textarea:focus {
+      border: 2px solid #6366f1;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.13);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+      max-height: 200px;
+    }
+    input[type="submit"] {
+      background: linear-gradient(90deg, #6366f1 60%, #818cf8 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 0;
+      font-size: 1.08rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      margin-top: 8px;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+      letter-spacing: 0.5px;
+    }
+    input[type="submit"]:hover {
+      background: linear-gradient(90deg, #3730a3 60%, #6366f1 100%);
+      box-shadow: 0 4px 16px rgba(99,102,241,0.13);
+    }
+    a {
+      background: #6366f1;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.2s;
+      border: none;
+      font-size: 1rem;
+      display: inline-block;
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    }
+    a:hover {
+      background: #3730a3;
+    }
+    .mensaje-icon {
+      font-size: 2.5rem;
+      color: #6366f1;
+      background: #eef2ff;
+      border-radius: 50%;
+      padding: 14px;
+      box-shadow: 0 1px 4px rgba(99,102,241,0.09);
+      margin-bottom: 8px;
+      margin-top: 4px;
+      display: inline-block;
+    }
+    .descripcion {
+      color: #444;
+      font-size: 1.08rem;
+      text-align: center;
+      margin-bottom: 8px;
+      margin-top: -10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="mensaje-icon">✉️</span>
+    <h1>Formulario de Contacto</h1>
+    <div class="descripcion">
+      ¿Tienes alguna pregunta o quieres saludarme?<br>
+      ¡Envíame un mensaje y te responderé pronto!
+    </div>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+      <input type="submit" value="Enviar">
+    </form>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>

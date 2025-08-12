@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre Mí</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg, #fdf6e3 0%, #fbbf24 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fondo 8s ease-in-out infinite alternate;
+    }
+    @keyframes fondo {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .container {
+      background: rgba(255, 251, 234, 0.98);
+      border: 2px solid #f59e42;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(251,191,36,0.18), 0 2px 8px rgba(0,0,0,0.07);
+      padding: 44px 60px 36px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      max-width: 370px;
+      animation: aparecer 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes aparecer {
+      0% { transform: translateY(40px) scale(0.95); opacity: 0; }
+      100% { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .foto-perfil {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fbbf24;
+      box-shadow: 0 4px 24px rgba(251,191,36,0.22), 0 1px 4px rgba(0,0,0,0.09);
+      margin-bottom: 10px;
+      background: #fff;
+      transition: transform 0.3s;
+    }
+    .foto-perfil:hover {
+      transform: scale(1.06) rotate(-2deg);
+      box-shadow: 0 8px 32px rgba(251,191,36,0.28), 0 2px 8px rgba(0,0,0,0.13);
+    }
+    h1 {
+      color: #b45309;
+      font-size: 2.1rem;
+      margin: 0;
+      letter-spacing: 1px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .datos {
+      background: #fff8e1;
+      border-radius: 12px;
+      padding: 12px 18px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 4px rgba(251,191,36,0.09);
+      font-size: 1rem;
+      color: #a16207;
+      width: 100%;
+      text-align: center;
+    }
+    p {
+      color: #7c4700;
+      font-size: 1.13rem;
+      margin: 0 0 8px 0;
+      text-align: center;
+      line-height: 1.6;
+    }
+    a {
+      background: linear-gradient(90deg, #f59e42 60%, #fbbf24 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.2s, box-shadow 0.2s;
+      border: none;
+      font-size: 1.08rem;
+      box-shadow: 0 2px 8px rgba(251,191,36,0.08);
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+    a:hover {
+      background: linear-gradient(90deg, #b45309 60%, #fbbf24 100%);
+      box-shadow: 0 4px 16px rgba(251,191,36,0.18);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="123.jpg.jfif" alt="Mi foto" class="foto-perfil">
+    <h1>Richar Ojeda Villavicencio</h1>
+    <div class="datos">
+      <div><strong>Edad:</strong> 23 años</div>
+      <div><strong>Ciudad:</strong> Sucre</div>
+      <div><strong>Estudios:</strong> Estudiante universitario</div>
+    </div>
+    <p>
+      ¡Hola! Soy un apasionado de la tecnología y el desarrollo web.<br>
+      Me encanta aprender cosas nuevas y crear proyectos que ayuden a las personas.<br>
+      Siempre busco mejorar mis habilidades y compartir mis conocimientos.
+    </p>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>

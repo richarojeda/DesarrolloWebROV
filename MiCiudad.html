@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Ciudad</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      border: 2px solid #6366f1;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(99,102,241,0.13);
+      padding: 44px 56px 36px 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+      min-width: 340px;
+      max-width: 600px;
+    }
+    h1 {
+      color: #3730a3;
+      font-size: 2.3rem;
+      margin: 0;
+      letter-spacing: 1px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .ciudades-list {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .ciudad-card {
+      background: #eef2ff;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.09);
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 220px;
+      transition: transform 0.18s;
+      min-height: 160px;
+    }
+    .ciudad-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(99,102,241,0.16);
+    }
+    .ciudad-icon {
+      font-size: 2.2rem;
+      color: #6366f1;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 1px 4px rgba(99,102,241,0.09);
+      margin-bottom: 10px;
+      margin-top: 4px;
+      display: inline-block;
+    }
+    .ciudad-nombre {
+      font-weight: bold;
+      color: #3730a3;
+      font-size: 1.13rem;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .ciudad-desc {
+      color: #444;
+      font-size: 1.05rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+    a {
+      background: #6366f1;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.2s;
+      border: none;
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    }
+    a:hover {
+      background: #3730a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mi Ciudad y Mi Residencia</h1>
+    <div class="ciudades-list">
+      <div class="ciudad-card">
+        <span class="ciudad-icon">🏛️</span>
+        <div class="ciudad-nombre">Sucre</div>
+        <div class="ciudad-desc">
+          Vivo en Sucre, la capital constitucional de Bolivia. Es una ciudad llena de historia, cultura y arquitectura colonial. Sus calles blancas y plazas hermosas la hacen única y especial.
+        </div>
+      </div>
+      <div class="ciudad-card">
+        <span class="ciudad-icon">🏡</span>
+        <div class="ciudad-nombre">San Lucas</div>
+        <div class="ciudad-desc">
+          Mi residencia está en San Lucas, un lugar tranquilo y acogedor rodeado de naturaleza. Aquí disfruto de la paz, la calidez de la gente y las tradiciones de mi comunidad.
+        </div>
+      </div>
+    </div>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>

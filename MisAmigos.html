@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Amigos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      border: 2px solid #6366f1;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(99,102,241,0.12);
+      padding: 38px 54px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      min-width: 340px;
+    }
+    h1 {
+      color: #3730a3;
+      font-size: 2.2rem;
+      margin: 0;
+      letter-spacing: 1px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .amigos-list {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .amigo-card {
+      background: #eef2ff;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.07);
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 160px;
+      transition: transform 0.18s;
+      min-height: 170px;
+    }
+    .amigo-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(99,102,241,0.13);
+    }
+    .amigo-icon {
+      font-size: 2.2rem;
+      color: #6366f1;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 1px 4px rgba(99,102,241,0.09);
+      margin-bottom: 10px;
+    }
+    .amigo-nombre {
+      font-weight: bold;
+      color: #3730a3;
+      font-size: 1.08rem;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .amigo-desc {
+      color: #444;
+      font-size: 0.98rem;
+      text-align: center;
+    }
+    p {
+      color: #444;
+      font-size: 1.1rem;
+      margin: 0 0 8px 0;
+      text-align: center;
+    }
+    a {
+      background: #6366f1;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.2s;
+      border: none;
+      font-size: 1rem;
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    }
+    a:hover {
+      background: #3730a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mis Amigos</h1>
+    <p>Mis amigos son personas increíbles con quienes comparto grandes momentos, risas y aventuras. Siempre están para apoyarme y juntos aprendemos y crecemos cada día.</p>
+    <div class="amigos-list">
+      <div class="amigo-card">
+        <span class="amigo-icon">🤝</span>
+        <div class="amigo-nombre">Carlos</div>
+        <div class="amigo-desc">Siempre dispuesto a ayudar y compartir sus conocimientos en tecnología.</div>
+      </div>
+      <div class="amigo-card">
+        <span class="amigo-icon">😄</span>
+        <div class="amigo-nombre">María</div>
+        <div class="amigo-desc">Su alegría y optimismo hacen que cada día sea más divertido.</div>
+      </div>
+      <div class="amigo-card">
+        <span class="amigo-icon">🎸</span>
+        <div class="amigo-nombre">Luis</div>
+        <div class="amigo-desc">Amante de la música y excelente compañero en todas las aventuras.</div>
+      </div>
+    </div>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>
