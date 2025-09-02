@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Mis Amigos</title>
+    <link rel="stylesheet" href="amigosCrud.css">
+</head>
+<body>
+    <h1>CRUD Mis Amigos</h1>
+    <div class="crud-container">
+        <form id="amigoForm">
+            <input type="hidden" id="amigoId">
+            <input type="text" id="nombres" placeholder="Nombres" required>
+            <input type="text" id="apellidos" placeholder="Apellidos" required>
+            <input type="text" id="celular" placeholder="Celular" required>
+            <input type="email" id="correo" placeholder="Correo" required>
+            <button type="submit" id="btnGuardar">Agregar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Celular</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="amigosTableBody">
+                <!-- Filas generadas dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function obtenerAmigos() {
+            return JSON.parse(localStorage.getItem('amigosTabla') || '[]');
+        }
+        function guardarAmigos(amigos) {
+            localStorage.setItem('amigosTabla', JSON.stringify(amigos));
+        }
+        function renderTabla() {
+            const amigos = obtenerAmigos();
+            const tbody = document.getElementById('amigosTableBody');
+            tbody.innerHTML = '';
+            amigos.forEach(amigo => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${amigo.id}</td>
+                    <td>${amigo.nombres}</td>
+                    <td>${amigo.apellidos}</td>
+                    <td>${amigo.celular}</td>
+                    <td>${amigo.correo}</td>
+                    <td>
+                        <button class="action-btn" onclick="editarAmigo(${amigo.id})">Editar</button>
+                        <button class="action-btn" onclick="eliminarAmigo(${amigo.id})">Eliminar</button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+        document.getElementById('amigoForm').onsubmit = function(e) {
+            e.preventDefault();
+            const id = document.getElementById('amigoId').value;
+            const nombres = document.getElementById('nombres').value;
+            const apellidos = document.getElementById('apellidos').value;
+            const celular = document.getElementById('celular').value;
+            const correo = document.getElementById('correo').value;
+            let amigos = obtenerAmigos();
+            if (id) {
+                amigos = amigos.map(a => a.id == id ? {id: a.id, nombres, apellidos, celular, correo} : a);
+                document.getElementById('btnGuardar').textContent = 'Agregar';
+            } else {
+                const nuevoId = amigos.length ? Math.max(...amigos.map(a => a.id)) + 1 : 1;
+                amigos.push({id: nuevoId, nombres, apellidos, celular, correo});
+            }
+            guardarAmigos(amigos);
+            renderTabla();
+            this.reset();
+            document.getElementById('amigoId').value = '';
+        };
+        window.editarAmigo = function(id) {
+            const amigo = obtenerAmigos().find(a => a.id == id);
+            document.getElementById('amigoId').value = amigo.id;
+            document.getElementById('nombres').value = amigo.nombres;
+            document.getElementById('apellidos').value = amigo.apellidos;
+            document.getElementById('celular').value = amigo.celular;
+            document.getElementById('correo').value = amigo.correo;
+            document.getElementById('btnGuardar').textContent = 'Guardar';
+        };
+        window.eliminarAmigo = function(id) {
+            if (confirm('¿Eliminar este amigo?')) {
+                let amigos = obtenerAmigos().filter(a => a.id != id);
+                guardarAmigos(amigos);
+                renderTabla();
+            }
+        };
+        renderTabla();
+    </script>
+</body>
+</html>
