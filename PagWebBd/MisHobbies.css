@@ -1,0 +1,131 @@
+/* Estilos para el CRUD de hobbies */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 40px 40px 40px;
+}
+
+h1, h2, h3 {
+  color: #2d3a4b;
+  margin-bottom: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  background: #fafbfc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 14px 12px;
+  text-align: left;
+}
+
+table th {
+  background: #3a7bd5;
+  color: #fff;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background: #f0f4fa;
+}
+
+table tr:hover {
+  background: #e3eefd;
+}
+
+img {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+a {
+  color: #3a7bd5;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 10px;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #1a4e8a;
+  text-decoration: underline;
+}
+
+button, input[type="submit"], input[type="button"] {
+  background: #3a7bd5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  background: #1a4e8a;
+}
+
+form {
+  margin-bottom: 24px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
+  padding: 10px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  width: 100%;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: 500;
+  color: #2d3a4b;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.alert {
+  background: #ffe0e0;
+  color: #b71c1c;
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  border: 1px solid #ffcdd2;
+}
+
+.success {
+  background: #e0ffe7;
+  color: #1b5e20;
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  border: 1px solid #b2dfdb;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px 6px;
+  }
+  table th, table td {
+    padding: 8px 4px;
+  }
+}
