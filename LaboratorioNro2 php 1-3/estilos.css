@@ -1,0 +1,18 @@
+ul.primos-lista {
+    border: 2px solid green;
+    background: #ffff10;
+    width: fit-content;
+    padding: 10px;
+}
+
+.palabras-ordenadas-container {
+    border: 2px solid red;
+    background: #ffff99;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+.palabras-ordenadas-lista {
+    list-style: none;
+    padding: 0;
+}
