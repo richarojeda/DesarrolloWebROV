@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Raíces Cuadráticas</title>
+  
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    label {
+        display: inline-block;
+        width: 40px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    input[type="number"] {
+        width: 200px;
+        padding: 8px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    input[type="number"]:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #resultado1, #resultado2 {
+        margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Calculadora de Raíces de Ecuación Cuadrática</h2>
+  <p style="text-align: center; color: #666;">ax² + bx + c = 0</p>
+  
+  <div style="text-align: center;">
+    <div style="margin-bottom: 15px;">
+      <label for="a">a:</label>
+      <input type="number" id="a" placeholder="Coeficiente de x²" step="any">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="b">b:</label>
+      <input type="number" id="b" placeholder="Coeficiente de x" step="any">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="c">c:</label>
+      <input type="number" id="c" placeholder="Término independiente" step="any">
+    </div>
+    
+    <button onclick="calcular()">Calcular Raíces</button>
+  </div>
+  
+  <div id="resultado1"></div>
+  <div id="resultado2"></div>
+
+  <script>
+    function calcular() {
+        const a = parseFloat(document.getElementById('a').value);
+        const b = parseFloat(document.getElementById('b').value);
+        const c = parseFloat(document.getElementById('c').value);
+        
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            document.getElementById('resultado1').innerHTML = '<p style="color: red;">Por favor, ingresa todos los valores.</p>';
+            document.getElementById('resultado2').innerHTML = '';
+            return;
+        }
+        
+        if (a === 0) {
+            document.getElementById('resultado1').innerHTML = '<p style="color: red;">El coeficiente "a" no puede ser cero.</p>';
+            document.getElementById('resultado2').innerHTML = '';
+            return;
+        }
+        
+        const discriminante = b * b - 4 * a * c;
+
+        document.getElementById('resultado1').innerHTML = '';
+        document.getElementById('resultado2').innerHTML = '';
+        
+        if (discriminante > 0) {
+            const raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+            const raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+            
+            document.getElementById('resultado1').innerHTML = 
+                `<div style="background-color: yellow; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                    <strong>Raíz 1:</strong> ${raiz1.toFixed(4)}
+                </div>`;
+            
+            document.getElementById('resultado2').innerHTML = 
+                `<div style="background-color: yellow; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                    <strong>Raíz 2:</strong> ${raiz2.toFixed(4)}
+                </div>`;
+                
+        } else if (discriminante === 0) {
+            // Una raíz real doble
+            const raiz = -b / (2 * a);
+            
+            document.getElementById('resultado1').innerHTML = 
+                `<div style="background-color: yellow; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                    <strong>Raíz doble:</strong> ${raiz.toFixed(4)}
+                </div>`;
+            
+            document.getElementById('resultado2').innerHTML = '';
+            
+        } else {
+            // Raíces complejas (imaginarias)
+            const parteReal = -b / (2 * a);
+            const parteImaginaria = Math.sqrt(-discriminante) / (2 * a);
+            
+            document.getElementById('resultado1').innerHTML = 
+                `<div style="background-color: green; padding: 10px; margin: 10px 0; border-radius: 5px; color: white;">
+                    <strong>Raíz 1 (compleja):</strong> ${parteReal.toFixed(4)} + ${parteImaginaria.toFixed(4)}i
+                </div>`;
+            
+            document.getElementById('resultado2').innerHTML = 
+                `<div style="background-color: green; padding: 10px; margin: 10px 0; border-radius: 5px; color: white;">
+                    <strong>Raíz 2 (compleja):</strong> ${parteReal.toFixed(4)} - ${parteImaginaria.toFixed(4)}i
+                </div>`;
+        }
+    }
+  </script>
+</body>
+</html>
